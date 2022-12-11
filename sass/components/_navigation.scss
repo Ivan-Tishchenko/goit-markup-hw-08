@@ -24,7 +24,9 @@
             margin-top: 32px;
         }
     }
-    margin-bottom: 306px;
+    @media screen and (max-width: 767px) {
+        margin-bottom: 306px;
+    }
 
     &-style {
         font-weight: 500;
