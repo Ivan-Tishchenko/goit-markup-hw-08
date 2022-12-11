@@ -1,0 +1,48 @@
+
+.contact-icon {
+    margin-right: 10px;
+    fill: currentColor;
+}
+
+.contact-top {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--sup-color);
+    
+    transition-property: color, font-size;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
+    &:hover, &:focus {
+        color: var(--hover-color);
+        font-size: 34px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .contacts {
+        display: flex;
+        flex-direction: column-reverse;
+        li+li {
+            margin-bottom: 32px;
+        }
+    }
+    .contact-icon{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .top-phone {
+        margin-left: 30px;
+    }
+    .contact-top {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: 14px;
+    }
+}

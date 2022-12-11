@@ -1,0 +1,17 @@
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.list-string {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }  
+}

@@ -1,0 +1,49 @@
+button {
+    border: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.icon-link,
+.link,
+.link-example {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.link {
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link-aktive,
+.link:hover,
+.link:focus {
+    color: var(--hover-color);
+}

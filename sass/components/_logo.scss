@@ -1,0 +1,33 @@
+.top-icon {
+    padding-top: 24px;
+    padding-bottom: 25px;
+    width: 134px;
+    margin-right: 88px;
+    @media screen and (min-width: 1200px) {
+        margin-right: 93px;
+        width: 145px;
+    }
+}
+.icon-link {
+    font-family: "Raleway";
+    font-weight: 700;
+    font-size: 24px;
+    @media screen and (min-width:1200px) {
+    font-size: 26px;
+    }
+    line-height: 1.19;
+}
+
+.second-half{
+    &-top {
+        color: #000000;
+    }
+
+    &-bottom {
+        color: var(--revers-color);
+    }
+}
+
+.half-icon {
+    color: #2196f3;
+}

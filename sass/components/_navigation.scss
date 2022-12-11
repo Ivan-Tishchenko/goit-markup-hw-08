@@ -1,0 +1,51 @@
+.link-aktive {
+    @media screen and (min-width: 768px) {
+        
+        position: relative;
+        
+        &::after {
+            content: " ";
+            background-color: var(--hover-color);
+            height: 4px;
+            width: 100%;
+            border-radius: 2px;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+        }
+    }
+}
+
+
+.navigation { 
+    
+    li {
+        &+ li {
+            margin-top: 32px;
+        }
+    }
+    margin-bottom: 306px;
+
+    &-style {
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
+    @media screen and (min-width: 768px) {
+        gap: 0;
+
+        li {
+            &+ li {
+                margin-top: 0;
+                margin-left: 50px;
+            }
+        }
+        &-style {
+            font-size: 14px;
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
+
+}

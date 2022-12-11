@@ -1,0 +1,100 @@
+.mobile-nav {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 517px;
+        .top-container {
+            .top-list {
+                display: block;
+                li {
+                    a {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    &+ li {
+                        margin-top: 10px;
+                    }
+                    
+                }
+            }
+        }
+    }
+    @media screen and (min-width: 768px) {   
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: calc(1170px - 237px);
+    }
+
+    &.is-open {
+        display: block;
+        background-color: #ffffff;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        height: 796px;
+        padding: 48px 40px;
+    }
+
+    &-button {
+        background-color: var(--revers-color);
+        z-index: 3;
+        transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        &:hover, &:focus {
+            color: var(--hover-color);
+        }
+
+        svg {
+            fill: currentColor;
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+
+        &.is-open {
+            .nav-menu {
+                display: none;
+            }
+            .nav-close {
+                display: block;
+            }
+        }
+        .nav-close {
+            display: none;
+        }
+    }
+
+}
+
+.menu-social-networks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+    li + li {
+        border-left: 1px solid rgba(33, 33, 33, 0.2);
+        padding-left: 10px;
+    
+    }
+}
+
+.menu-link-network {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: var(--hover-color);
+        
+}

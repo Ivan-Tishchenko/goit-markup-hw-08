@@ -1,0 +1,25 @@
+address {
+    font-style: normal;
+    margin-top: 20px;
+}
+
+.adres {
+    &-link {
+        font-size: 14px;
+        line-height: 1.71;
+        color: var(--revers-color);
+    }
+        
+    &-item {
+        & + & {
+            margin-top: 9px;
+        }
+    }
+}
+
+.contact-link-bottom {
+    font-size: 14px;
+    line-height: 1.71;
+
+    color: rgba(255, 255, 255, 0.6);
+}
