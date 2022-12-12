@@ -18,7 +18,12 @@
 .content-container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 480px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .content-container {
+    max-width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .content-container {
@@ -72,8 +77,16 @@
 }
 
 .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 60px 0;
-  min-width: 480px;
 }
 @media screen and (min-width: 1200px) {
   .section {
@@ -182,13 +195,19 @@ img {
   .list-string {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    gap: 0;
   }
 }
 
 .content-container {
   margin: 0 auto;
   padding: 0 15px;
-  width: 480px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .content-container {
+    max-width: 480px;
+  }
 }
 @media screen and (min-width: 768px) {
   .content-container {
@@ -473,7 +492,11 @@ img {
   padding-top: 24px;
   padding-bottom: 25px;
   width: 134px;
-  margin-right: 88px;
+}
+@media screen and (min-width: 768px) {
+  .top-icon {
+    margin-right: 88px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .top-icon {
@@ -509,7 +532,6 @@ footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 480px;
 }
 
 .footer-container {
@@ -609,6 +631,20 @@ address {
   margin-top: 20px;
 }
 
+@media screen and (max-width: 1199px) {
+  .addres-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .adres-link {
   font-size: 14px;
   line-height: 1.71;
@@ -725,7 +761,8 @@ address {
 }
 
 .typing-email {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 50px;
   margin-right: 12px;
   background: none;
@@ -838,9 +875,6 @@ address {
   }
 }
 
-.product {
-  min-width: 480px;
-}
 .product .content-container {
   text-align: center;
 }
@@ -891,7 +925,8 @@ address {
 
 .modal {
   position: relative;
-  width: 450px;
+  width: calc(100% - 30px);
+  max-width: 450px;
   height: 609px;
   top: 50%;
   left: 50%;
@@ -967,7 +1002,8 @@ address {
 }
 
 .typing-coment {
-  width: 370px;
+  width: 100%;
+  max-width: 370px;
   height: 120px;
   padding: 11.65px 16px;
   margin-top: 4px;
@@ -1156,7 +1192,13 @@ address {
 }
 
 .benefits {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
+}
+@media screen and (max-width: 767px) {
+  .benefits:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 @media screen and (min-width: 768px) {
   .benefits {
@@ -1174,7 +1216,8 @@ address {
 .benefits-name::before {
   content: " ";
   display: inline-block;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 120px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1258,20 +1301,25 @@ address {
 .list-photo-masters {
   margin-top: 50px;
 }
+.list-photo-masters > li:not(:last-child) {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .list-photo-masters > li:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-photo-masters > li:not(:last-child) {
+    margin-right: 30px;
+  }
+}
 .list-photo-masters li {
-  width: 450px;
+  max-width: 450px;
   background: var(--revers-color);
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-}
-.list-photo-masters li:not(:last-child) {
-  margin-bottom: 30px;
-}
-@media screen and (min-width: 768px) {
-  .list-photo-masters li:not(:last-child) {
-    margin-bottom: 0;
-  }
 }
 @media screen and (min-width: 768px) {
   .list-photo-masters li {
@@ -1284,8 +1332,9 @@ address {
   }
 }
 .list-photo-masters li img {
-  width: 450px;
-  height: 460px;
+  width: 100%;
+  max-width: 450px;
+  max-height: 460px;
 }
 @media screen and (min-width: 768px) {
   .list-photo-masters li img {
@@ -1318,7 +1367,9 @@ address {
 }
 
 .employee-position {
-  padding: 30px 32px;
+  width: 100%;
+  max-width: 450px;
+  max-height: 162px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1332,6 +1383,10 @@ address {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 30px 32px;
+}
+.employee-position p {
+  margin-bottom: 16px;
 }
 
 .network-list {
@@ -1341,8 +1396,10 @@ address {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 16px;
   width: 206px;
+  height: 44px;
+  width: 206px;
+  height: 44px;
 }
 .network-list li {
   -webkit-box-shadow: none;
@@ -1401,10 +1458,16 @@ address {
   gap: 30px;
   margin-top: 30px;
 }
+@media screen and (max-width: 767px) {
+  .company-list li {
+    width: calc((100% - 30px) / 2);
+  }
+}
 @media screen and (min-width: 1200px) {
   .company-list {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
+    gap: 0;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -1428,8 +1491,8 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 210px;
-  height: 92px;
+  max-width: 210px;
+  max-height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -1539,7 +1602,8 @@ address {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: var(--revers-color);
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
 }
 @media screen and (min-width: 768px) {
   .list-examples li {
@@ -1552,7 +1616,8 @@ address {
   }
 }
 .list-examples li img {
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 294px;
 }
 @media screen and (min-width: 768px) {
@@ -1585,7 +1650,8 @@ address {
 .example-description {
   background: var(--revers-color);
   border: 1px solid #eeeeee;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
@@ -1619,7 +1685,8 @@ address {
 
 .container-hover-overlay {
   position: relative;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   height: 294px;
   overflow: hidden;
 }

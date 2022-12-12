@@ -3,9 +3,16 @@
             flex-wrap: wrap;
             gap: 30px;
             margin-top: 30px;
+
+            li {
+                @media screen and (max-width: 767px) {
+                    width: calc((100% - 30px) / 2);        
+                }
+            }
             
             @media screen and (min-width: 1200px) {
                 flex-wrap: nowrap;
+                gap: 0;
                 justify-content: space-between;
                 align-items: center;
                 margin-top: 50px;
@@ -20,8 +27,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 210px;
-    height: 92px;
+    max-width: 210px;
+    max-height: 92px;
     color: #afb1b8;
     border: 1px solid #afb1b8;
     border-radius: 4px;
