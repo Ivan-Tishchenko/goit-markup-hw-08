@@ -862,7 +862,7 @@ address {
   text-transform: uppercase;
   color: var(--revers-color);
   margin: 0 auto 30px;
-  width: 360px;
+  max-width: 360px;
 }
 @media screen and (min-width: 1200px) {
   .product__advertising {
@@ -1492,7 +1492,7 @@ address {
       -ms-flex-align: center;
           align-items: center;
   max-width: 210px;
-  max-height: 92px;
+  height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
